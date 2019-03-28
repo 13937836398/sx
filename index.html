@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+				background: deeppink;
+				cursor: move;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aa"></div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(".aa").mouseover(function(e){
+   			$(document).bind("mousemove",function(e){
+    			var px=e.clientX-$(".aa").width()/2;
+    			var py=e.clientY-$(".aa").height()/2;
+      			$(".aa").css("left",px+"px").css("top",py+"px")
+  		    });
+		})
+	</script>
+</html>
